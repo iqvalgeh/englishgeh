@@ -5,8 +5,8 @@ import {
     oxDay1, oxDay2, oxDay3, oxDay4, oxDay5,
     oxDay6, oxDay7, oxDay8, oxDay9, oxDay10
 } from '@/utils/okquiz';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import Entypo from '@expo/vector-icons/Entypo';
+import Ads from './Ads';
+
 
 const quizDataMap = {
     c1: oxDay1, c2: oxDay2, c3: oxDay3, c4: oxDay4, c5: oxDay5,
@@ -94,7 +94,10 @@ const QuizGame: React.FC<QuizGameProps> = ({ id }) => {
     };
 
     return (
+
         <View style={styles.container}>
+            <Ads />
+
             <View style={styles.progressContainer}>
                 <Animated.View style={[styles.progressBar, { width: progressAnim }]} />
             </View>
@@ -116,6 +119,7 @@ const QuizGame: React.FC<QuizGameProps> = ({ id }) => {
                         <Text style={styles.optionText}>{option}</Text>
                     </Pressable>
                 ))}
+
             </View>
 
             {showNextButton && (

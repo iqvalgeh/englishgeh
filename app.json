@@ -12,17 +12,23 @@
       "resizeMode": "contain",
       "backgroundColor": "#f50ca0",
       "newArchEnabled": true
+      
     },
+    
     "ios": {
-      "supportsTablet": true
-    },
+    "buildNumber": "1",
+    "supportsTablet": true
+    
+  },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/eg.png",
         "backgroundColor": "#f50ca0"
       },
       "package": "com.iqvalgeh.englishgehgradetwo",
-      "config": {
+      "permissions": ["com.google.android.gms.permission.AD_ID"],
+    "googleServicesFile": "./google-services.json",
+     "config": {
         "googleMobileAdsAppId": "ca-app-pub-5330416188910245~1591169874"
       }
     },
@@ -33,7 +39,13 @@
     },
     "plugins": [
       "expo-router",
-      "expo-font"
+      "expo-font",
+      ["react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-5330416188910245~1591169874"
+        }
+     ]
+      
     ],
     "experiments": {
       "typedRoutes": true

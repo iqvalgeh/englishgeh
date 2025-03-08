@@ -1,9 +1,23 @@
 import { Stack } from 'expo-router';
 import { Button } from 'react-native';
 import { useRouter } from 'expo-router';
+import { useEffect } from 'react';
+import mobileAds from 'react-native-google-mobile-ads';
 
 export default function Layout() {
   const router = useRouter();
+
+  // Initialize AdMob when the app starts
+  useEffect(() => {
+    mobileAds()
+      .initialize()
+      .then(adapterStatuses => {
+        console.log('AdMob initialized:', adapterStatuses);
+      })
+      .catch(error => {
+        console.error('AdMob initialization failed:', error);
+      });
+  }, []);
 
   // Function to render the header right button
   const renderMenuButton = () => (

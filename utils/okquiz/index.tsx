@@ -1,0 +1,10 @@
+export { oxDay1 } from './day1';
+export { oxDay2 } from './day2';
+export { oxDay3 } from './day3';
+export { oxDay4 } from './day4';
+export { oxDay5 } from './day5';
+export { oxDay6 } from './day6';
+export { oxDay7 } from './day7';
+export { oxDay8 } from './day8';
+export { oxDay9 } from './day9';
+export { oxDay10 } from './day10';

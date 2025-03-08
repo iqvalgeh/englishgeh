@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "Englishgeh Grade Two",
+    "slug": "englishgeh",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/eg.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/f50ca0.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#f50ca0",
+      "newArchEnabled": true
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/eg.png",
+        "backgroundColor": "#f50ca0"
+      },
+      "package": "com.iqvalgeh.englishgehgradetwo",
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-5330416188910245~1591169874"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/eg.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8a365da2-a7a0-4ef9-9614-ab393f9b3fae"
+      }
+    }
+  }
+}

@@ -9,8 +9,6 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     
-    "eas-install": "npm ci",
-    "prebuild": "npm run eas-install",
     "doctor": "expo doctor",
     "dev:build:android": "eas build --profile development --platform android",
     "build:android:prod": "eas build -p android --profile production"

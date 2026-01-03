@@ -1,2 +1,0 @@
-This app does not collect, store, or share any personal user data.
-The app works fully offline and does not use third-party services or ads.

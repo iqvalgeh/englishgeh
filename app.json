@@ -2,54 +2,58 @@
   "expo": {
     "name": "Englishgeh Grade Two",
     "slug": "englishgeh",
+    "scheme": "englishgeh",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/eg.png",
-    "scheme": "myapp",
     "userInterfaceStyle": "automatic",
+
     "splash": {
-      "image": "./assets/images/f50ca0.png",
+      "image": "./assets/images/eg.png",
       "resizeMode": "contain",
-      "backgroundColor": "#f50ca0",
-      "newArchEnabled": true
-      
+      "backgroundColor": "#f50ca0"
     },
-    
+
     "ios": {
-    "buildNumber": "1",
-    "supportsTablet": true
-    
-  },
+      "buildNumber": "1",
+      "supportsTablet": true
+    },
+
     "android": {
+      "package": "com.iqvalgeh.englishgehgradetwo",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/eg.png",
         "backgroundColor": "#f50ca0"
-      },
-      "package": "com.iqvalgeh.englishgehgradetwo",
-      "permissions": ["com.google.android.gms.permission.AD_ID"],
-    "googleServicesFile": "./google-services.json",
-     "config": {
-        "googleMobileAdsAppId": "ca-app-pub-5330416188910245~1591169874"
       }
     },
+
     "web": {
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/eg.png"
     },
+
     "plugins": [
       "expo-router",
       "expo-font",
-      ["react-native-google-mobile-ads",
+      [
+        "expo-build-properties",
         {
-          "androidAppId": "ca-app-pub-5330416188910245~1591169874"
+          "android": {
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "buildToolsVersion": "34.0.0"
+          }
         }
-     ]
-      
+      ],
+      "expo-web-browser",
+      "expo-secure-store"
     ],
+
     "experiments": {
       "typedRoutes": true
     },
+
     "extra": {
       "eas": {
         "projectId": "8a365da2-a7a0-4ef9-9614-ab393f9b3fae"

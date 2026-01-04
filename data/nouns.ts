@@ -3,7 +3,7 @@ import { WordItem } from "./types";
 export const nouns: WordItem[][] = [
   // LEVEL 1 — basic & visual
   [
-    { word: "cat", icon: "logo-octocat" },                 // fix: lebih sesuai
+    { word: "cat", icon: "paw-outline" },
     { word: "dog", icon: "paw-outline" },
     { word: "apple", icon: "nutrition-outline" },
     { word: "ball", icon: "football-outline" },
@@ -11,7 +11,7 @@ export const nouns: WordItem[][] = [
     { word: "book", icon: "book-outline" },
     { word: "pen", icon: "pencil-outline" },
     { word: "cup", icon: "cafe-outline" },
-    { word: "hat", icon: "help-circle-outline" },        // ❓ tidak ada icon hat
+    { word: "hat", icon: "help-circle-outline" }, // aman
     { word: "bed", icon: "bed-outline" },
     { word: "sun", icon: "sunny-outline" },
     { word: "moon", icon: "moon-outline" },
@@ -22,14 +22,14 @@ export const nouns: WordItem[][] = [
   // LEVEL 2 — daily objects
   [
     { word: "house", icon: "home-outline" },
-    { word: "chair", icon: "help-circle-outline" },      // ❓ tidak ada chair
-    { word: "table", icon: "help-circle-outline" },      // ❓
+    { word: "chair", icon: "help-circle-outline" },
+    { word: "table", icon: "help-circle-outline" },
     { word: "phone", icon: "phone-portrait-outline" },
     { word: "clock", icon: "time-outline" },
     { word: "shoe", icon: "walk-outline" },
     { word: "shirt", icon: "shirt-outline" },
     { word: "bag", icon: "briefcase-outline" },
-    { word: "door", icon: "exit-outline" },              // fix: lebih sesuai
+    { word: "door", icon: "exit-outline" },
     { word: "window", icon: "browsers-outline" },
     { word: "key", icon: "key-outline" },
     { word: "milk", icon: "water-outline" },
@@ -73,20 +73,20 @@ export const nouns: WordItem[][] = [
     { word: "culture", icon: "people-circle-outline" },
   ],
 
-  // LEVEL 5 — abstract (symbolic)
+  // LEVEL 5 — abstract
   [
     { word: "environment", icon: "leaf-outline" },
-    { word: "technology", icon: "hardware-chip-outline" },
+    { word: "technology", icon: "laptop-outline" }, // FIX
     { word: "education", icon: "school-outline" },
     { word: "population", icon: "people-outline" },
     { word: "government", icon: "business-outline" },
-    { word: "development", icon: "trending-up-outline" },
+    { word: "development", icon: "build-outline" }, // FIX
     { word: "information", icon: "information-circle-outline" },
     { word: "communication", icon: "chatbubbles-outline" },
     { word: "transportation", icon: "bus-outline" },
     { word: "electricity", icon: "flash-outline" },
     { word: "temperature", icon: "thermometer-outline" },
-    { word: "pollution", icon: "help-circle-outline" },  // ❓ lebih aman
+    { word: "pollution", icon: "alert-outline" },
     { word: "construction", icon: "hammer-outline" },
     { word: "management", icon: "layers-outline" },
   ],
@@ -96,7 +96,7 @@ export const nouns: WordItem[][] = [
     { word: "architecture", icon: "business-outline" },
     { word: "agriculture", icon: "leaf-outline" },
     { word: "philosophy", icon: "bulb-outline" },
-    { word: "psychology", icon: "brain-outline" },
+    { word: "psychology", icon: "bulb-outline" }, // FIX (brain tidak ada)
     { word: "economics", icon: "stats-chart-outline" },
     { word: "literature", icon: "book-outline" },
     { word: "engineering", icon: "settings-outline" },
@@ -117,12 +117,12 @@ export const nouns: WordItem[][] = [
     { word: "organization", icon: "albums-outline" },
     { word: "relationship", icon: "heart-circle-outline" },
     { word: "understanding", icon: "eye-outline" },
-    { word: "independence", icon: "help-circle-outline" }, // ❓
+    { word: "independence", icon: "walk-outline" }, // FIX
     { word: "imagination", icon: "color-palette-outline" },
     { word: "confidence", icon: "thumbs-up-outline" },
     { word: "motivation", icon: "rocket-outline" },
     { word: "achievement", icon: "trophy-outline" },
-    { word: "experience", icon: "help-circle-outline" },   // ❓ proses abstrak
+    { word: "experience", icon: "time-outline" }, // FIX
     { word: "performance", icon: "speedometer-outline" },
     { word: "knowledge", icon: "school-outline" },
   ],

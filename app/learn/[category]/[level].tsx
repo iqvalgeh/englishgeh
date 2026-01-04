@@ -7,6 +7,7 @@ import IconWordCard from "../../../components/IconWordCard";
 import { nouns } from "../../../data/nouns";
 import { verbs } from "../../../data/verbs";
 import { adjectives } from "../../../data/adjectives";
+import type { WordItem } from "../../../data/types";
 
 type Category = "noun" | "verb" | "adjective";
 
@@ -21,13 +22,13 @@ export default function Learn() {
   const router = useRouter();
   const index = Number(level) - 1;
 
-  const dataMap: Record<Category, any[]> = {
+  const dataMap: Record<Category, WordItem[][]> = {
     noun: nouns,
     verb: verbs,
     adjective: adjectives,
   };
 
-  const words = dataMap[category]?.[index];
+  const words: WordItem[] | undefined = dataMap[category]?.[index];
 
   if (!words) {
     return (
@@ -38,10 +39,7 @@ export default function Learn() {
   }
 
   return (
-    <LinearGradient
-      colors={["#FDE2F3", "#EEF2FF"]}
-      style={{ flex: 1 }}
-    >
+    <LinearGradient colors={["#FDE2F3", "#EEF2FF"]} style={{ flex: 1 }}>
       <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.card}>
           {/* HEADER */}
@@ -63,7 +61,7 @@ export default function Learn() {
             <View style={{ width: 36 }} />
           </View>
 
-          {/* ACTION ROW */}
+          {/* ACTION */}
           <View style={styles.actionRow}>
             <Pressable
               onPress={() =>
@@ -97,6 +95,7 @@ export default function Learn() {
     </LinearGradient>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {

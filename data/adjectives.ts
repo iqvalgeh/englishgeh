@@ -10,10 +10,10 @@ export const adjectives: WordItem[][] = [
     { word: "slow", icon: "walk-outline" },
 
     { word: "hot", icon: "flame-outline" },
-    { word: "cold", icon: "snow-outline" },
+    { word: "cold", icon: "water-outline" },
 
-    { word: "happy", icon: "happy-outline" },
-    { word: "sad", icon: "sad-outline" },
+    { word: "happy", icon: "happy-outline" as any }, // fallback UI
+    { word: "sad", icon: "sad-outline" as any },     // fallback UI
 
     { word: "clean", icon: "sparkles-outline" },
     { word: "dirty", icon: "trash-outline" },
@@ -22,7 +22,7 @@ export const adjectives: WordItem[][] = [
     { word: "empty", icon: "battery-dead-outline" },
 
     { word: "new", icon: "sparkles-outline" },
-    { word: "old", icon: "hourglass-outline" },
+    { word: "old", icon: "time-outline" },
   ],
 
   // LEVEL 2 — daily descriptions
@@ -56,7 +56,7 @@ export const adjectives: WordItem[][] = [
     { word: "strong", icon: "barbell-outline" },
     { word: "weak", icon: "remove-circle-outline" },
     { word: "smart", icon: "bulb-outline" },
-    { word: "funny", icon: "happy-outline" },
+    { word: "funny", icon: "happy-outline" as any }, // fallback
     { word: "serious", icon: "school-outline" },
     { word: "polite", icon: "hand-left-outline" },
   ],
@@ -70,7 +70,7 @@ export const adjectives: WordItem[][] = [
     { word: "famous", icon: "star-outline" },
     { word: "popular", icon: "people-circle-outline" },
     { word: "interesting", icon: "sparkles-outline" },
-    { word: "boring", icon: "help-circle-outline" }, // ❓
+    { word: "boring", icon: "help-circle-outline" },
     { word: "useful", icon: "build-outline" },
     { word: "useless", icon: "trash-outline" },
     { word: "safe", icon: "shield-checkmark-outline" },
@@ -82,22 +82,22 @@ export const adjectives: WordItem[][] = [
   // LEVEL 5 — abstract qualities
   [
     { word: "modern", icon: "hardware-chip-outline" },
-    { word: "traditional", icon: "help-circle-outline" },
+    { word: "traditional", icon: "school-outline" },
     { word: "natural", icon: "leaf-outline" },
-    { word: "artificial", icon: "construct-outline" }, // jika error, ganti help-circle
+    { word: "artificial", icon: "settings-outline" },
     { word: "simple", icon: "remove-outline" },
     { word: "complex", icon: "layers-outline" },
     { word: "effective", icon: "checkmark-done-outline" },
     { word: "efficient", icon: "speedometer-outline" },
     { word: "creative", icon: "color-palette-outline" },
-    { word: "logical", icon: "analytics-outline" },
+    { word: "logical", icon: "bulb-outline" },
     { word: "practical", icon: "build-outline" },
     { word: "theoretical", icon: "school-outline" },
     { word: "flexible", icon: "sync-outline" },
     { word: "stable", icon: "lock-closed-outline" },
   ],
 
-  // LEVEL 6 — academic / descriptive
+  // LEVEL 6 — academic
   [
     { word: "independent", icon: "walk-outline" },
     { word: "dependent", icon: "link-outline" },
@@ -107,7 +107,7 @@ export const adjectives: WordItem[][] = [
     { word: "critical", icon: "alert-circle-outline" },
     { word: "innovative", icon: "rocket-outline" },
     { word: "strategic", icon: "map-outline" },
-    { word: "systematic", icon: "git-network-outline" },
+    { word: "systematic", icon: "layers-outline" },
     { word: "professional", icon: "briefcase-outline" },
     { word: "technical", icon: "settings-outline" },
     { word: "scientific", icon: "flask-outline" },
@@ -115,7 +115,7 @@ export const adjectives: WordItem[][] = [
     { word: "historical", icon: "time-outline" },
   ],
 
-  // LEVEL 7 — advanced / abstract
+  // LEVEL 7 — advanced
   [
     { word: "responsible", icon: "shield-checkmark-outline" },
     { word: "confident", icon: "thumbs-up-outline" },

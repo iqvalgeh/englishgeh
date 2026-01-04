@@ -32,6 +32,8 @@ const PHONETIC: Record<string, string> = {
 
 let timer: ReturnType<typeof setTimeout> | null = null;
 
+/* ================= STOP ================= */
+
 export function stopSpeech() {
   if (timer) {
     clearTimeout(timer);
@@ -40,8 +42,11 @@ export function stopSpeech() {
   Speech.stop();
 }
 
+/* ================= WORD ================= */
+
 export function speakWord(word: string) {
   stopSpeech();
+
   Speech.speak(word, {
     language: "en-US",
     rate: Platform.OS === "android" ? 0.95 : 0.55,
@@ -49,20 +54,26 @@ export function speakWord(word: string) {
   });
 }
 
-/* 🔥 ANDROID SPELLING FIX */
+/* ================= SPELL ================= */
+
 export function speakLetters(word: string) {
   stopSpeech();
 
-  const letters = word.toLowerCase().split("");
+  const letters = word
+    .toLowerCase()
+    .replace(/[^a-z]/g, "")
+    .split("");
+
   let i = 0;
 
   const speakNext = () => {
     if (i >= letters.length) return;
 
+    const letter = letters[i];
     const text =
       Platform.OS === "android"
-        ? PHONETIC[letters[i]] ?? letters[i]
-        : letters[i];
+        ? PHONETIC[letter] ?? letter
+        : letter;
 
     Speech.speak(text, {
       language: "en-US",
